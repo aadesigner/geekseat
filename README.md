@@ -1,2 +1,2 @@
-# A starter React App using Bootstrap, JavaScript, Sass and Storybook
-
+# A starter React App
+Using Bootstrap, JavaScript, Sass and Storybook
