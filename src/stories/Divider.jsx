@@ -1,7 +1,7 @@
 import React from "react";
 import './Divider.scss';
 
-export const Divider = ({ primary, backgroundColor, size, label, ...props }) => {
+export const Divider = () => {
   return (
     <div>
        <div class="divider">Label</div>
