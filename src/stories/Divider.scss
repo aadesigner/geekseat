@@ -1,0 +1,80 @@
+$divider-selector    : ".divider";
+$divider-border-color: rgba(0,0,0,1);
+$divider-padding     : 1rem;
+$divider-border-width: 2px;
+$divider-border-style: solid;
+$divider-max-width   : 100%;
+$divider-text-size   : 15px;
+
+#{$divider-selector} {
+    display: flex;
+    align-items: center;
+    padding: 0 $divider-padding;
+    max-width: $divider-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: $divider-text-size;
+    &:before,
+    &:after {
+        content: '';
+        flex: 0 1 100%;
+        border-bottom: $divider-border-width $divider-border-style $divider-border-color;
+        margin: 0 $divider-padding;
+        transform: translateY(#{$divider-border-width} / 2)
+    }
+
+    &:before {
+        margin-left: 0;
+    }
+
+    &:after {
+        margin-right: 0;
+    }
+
+    &[text-position="right"]:after,
+    &[text-position="left"]:before {
+        content: none;
+    }
+}
+
+.divider--solid {
+    &:before,
+    &:after {
+        border-bottom-style: solid;
+    }
+}
+
+.divider--dashed {
+    &:before,
+    &:after {
+        border-bottom-style: dashed;
+    }
+}
+
+.divider--dotted {
+    &:before,
+    &:after {
+        border-bottom-style: dotted;
+    }
+}
+
+.divider--light {
+    &:before,
+    &:after {
+        border-bottom-width: 1px;
+    }
+}
+
+.divider--normal {
+    &:before,
+    &:after {
+        border-bottom-width: 2px;
+    }
+}
+
+.divider--heavy {
+    &:before,
+    &:after {
+        border-bottom-width: 3px;
+    }
+}
